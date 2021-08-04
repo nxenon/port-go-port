@@ -172,8 +172,8 @@ func forwardToRemotePort() {
 			return
 		}
 		processed_data := commitServiceFilters(data, "client")
-		println("to remote")
-		println(processed_data)
+		//println("to remote")
+		//println(processed_data)
 		remoteSocket.Write([]byte(processed_data))
 	}
 
@@ -191,8 +191,8 @@ func forwardFromRemotePort(){
 			return
 		}
 		processed_data := commitServiceFilters(string(data), "remote")
-		println("from remote")
-		println(processed_data)
+		//println("from remote")
+		//println(processed_data)
 		clientSocket.Write([]byte(processed_data))
 	}
 
