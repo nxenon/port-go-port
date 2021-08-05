@@ -174,7 +174,10 @@ func forwardToRemotePort() {
 		processed_data := commitServiceFilters(data, "client")
 		//println("to remote")
 		//println(processed_data)
-		remoteSocket.Write([]byte(processed_data))
+		_, err = remoteSocket.Write([]byte(processed_data))
+		if err != nil {
+			break
+		}
 	}
 
 }
@@ -193,7 +196,10 @@ func forwardFromRemotePort(){
 		processed_data := commitServiceFilters(string(data), "remote")
 		//println("from remote")
 		//println(processed_data)
-		clientSocket.Write([]byte(processed_data))
+		_, err = clientSocket.Write([]byte(processed_data))
+		if err != nil {
+			break
+		}
 	}
 
 }
