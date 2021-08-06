@@ -1,4 +1,4 @@
-module github.com/nxenon/c2x-client-go
+module github.com/nxenon/port-go-port
 
 go 1.13
 
