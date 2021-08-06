@@ -3,10 +3,11 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/akamensky/argparse"
 	"net"
 	"os"
 	"time"
+
+	"github.com/akamensky/argparse"
 )
 
 
