@@ -229,7 +229,11 @@ func closeBothConnections(){
 
 }
 
-func commitServiceFilters(data string, _from string)(string){
+func commitServiceFilters(
+	data, _from string,
+	)(
+	string,
+	){
 
 	/*
 	this function process data and change them if it is necessary and if service is not None
